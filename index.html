@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>AFFAR — Portfolio</title>
+  <meta name="description" content="AFFAR — Web Developer portfolio showcasing projects, certifications, and contact details." />
+  <meta name="theme-color" content="#7f5af0">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/fav.jpg" type="image/png">
+
+  <!-- Favicon (all devices) -->
+
+  <!-- Fonts & Icons -->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Scripts -->
+  <script defer src="/script.js"></script>
+</head>
+<body>
+<header class="site-header" id="#" >
+  <div class="container nav-bar">
+    <a href="#top" class="brand">AFFAR<span class="brand-dot">.</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <i class="fa fa-bars"></i>
+    </button>
+    <nav id="primary-nav" class="primary-nav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="resume/resume.pdf" target="_blank">Resume</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero section container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Affar — <span class="accent">Web Developer</span></h1>
+        <p class="sub">I craft beautiful, responsive websites and web apps. Focused on clean code and strong UX.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="mailto:affar048@gmail.com">Hire Me</a>
+        </div>
+        <div class="social-links">
+  <a href="https://github.com/affar048" target="_blank" aria-label="GitHub">
+    <!-- GitHub SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.8 2.2 3.4 1.6.1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.3 1.1-3.2-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3.1 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.2-1.5 3.1-1.2 3.1-1.2.6 1.6.2 2.8.1 3.1.7.9 1.1 1.9 1.1 3.2 0 4.6-2.8 5.6-5.4 5.9.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5z"/>
+    </svg>
+  </a>
+
+  <a href="https://linkedin.com/in/affar-a-312501255" target="_blank" aria-label="LinkedIn">
+    <!-- LinkedIn SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.45 20.45h-3.6v-5.3c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8v5.4h-3.6v-11h3.5v1.5h.1c.5-.9 1.6-1.8 3.4-1.8 3.7 0 4.4 2.4 4.4 5.6v5.7zM5.3 8.4c-1.2 0-2.1-1-2.1-2.1s.9-2.1 2.1-2.1 2.1.9 2.1 2.1c0 1.1-.9 2.1-2.1 2.1zm1.8 12.05H3.5v-11h3.6v11zM22.2 0H1.8C.8 0 0 .8 0 1.8v20.4C0 23.2.8 24 1.8 24h20.4c1 0 1.8-.8 1.8-1.8V1.8c0-1-.8-1.8-1.8-1.8z"/>
+    </svg>
+  </a>
+  <a href="https://www.youtube.com/@affu048" target="_blank" aria-label="YouTube">
+  <!-- YouTube SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M19.615 3.184c-1.675-.444-8.615-.444-8.615-.444s-6.94 0-8.615.444C1.615 3.628 1 5.06 1 7.06v9.88c0 2 .615 3.432 1.385 3.876 1.675.444 8.615.444 8.615.444s6.94 0 8.615-.444C22.385 20.372 23 18.94 23 16.94V7.06c0-2-.615-3.432-1.385-3.876zM9.75 15.5v-7l6 3.5-6 3.5z"/>
+  </svg>
+</a>
+  <a href="https://www.facebook.com/affar048?__tn__=%3C%2Cd%3C*F" target="_blank" aria-label="Facebook">
+  <!-- Facebook SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 
+    23.407.593 24 1.325 24h11.495v-9.294H9.691V11.08h3.129V8.414c0-3.1 
+    1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24l-1.918.001c-1.504 
+    0-1.796.715-1.796 1.763v2.307h3.587l-.467 3.626h-3.12V24h6.116C23.407 
+    24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
+  </svg>
+  </a>
+
+  </div>
+
+      </div>
+      <div class="hero-media">
+        <div class="avatar-wrap">
+          <img src="/images/me.jpg" alt="Affar profile" 
+            onerror="this.src='https://via.placeholder.com/400x400/7f5af0/ffffff?text=Affar'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section container reveal">
+    <h2 class="section-title">About Me</h2>
+    <p class="lead">A passionate web developer from Kallakurichi. I build responsive sites with attention to performance and accessibility.</p>
+    <div class="chips">
+      <span class="chip">HTML</span>
+      <span class="chip">CSS</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">React</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">MongoDB</span>
+    </div>
+    <div class="edu-card">
+      <h3>Bachelor of Computer Applications (BCA)</h3>
+      <p>Jamal Mohamed College, Tiruchirappalli</p>
+      <p><strong>Duration:</strong> 2022 – 2025</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section container reveal">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid cards-3">
+      <article class="card">
+        <img src="/projects/food.png" alt="Milk Society Project"
+          onerror="this.src='https://via.placeholder.com/800x500/8a2be2/fff?text=Milk+Society'">
+        <div class="card-body">
+          <h3>Goodbye junk food</h3>
+          <p>A responsive portfolio built with HTML, CSS, and JavaScript.</p>
+          <div class="card-actions">
+            <a class="btn small" href="#" aria-disabled="true" target="_blank">View Live</a>
+            <a class="btn small ghost" href="#" aria-disabled="true" target="_blank">View Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="/projects/keeperapp.png" alt="Todo App"
+          onerror="this.src='https://via.placeholder.com/800x500/ff758c/fff?text=Todo+App'">
+        <div class="card-body">
+          <h3>Keeper App (React) </h3>
+          <p>This is a simple and responsive note-taking app built using React JS. It allows users to add and delete notes easily. The app is styled with Tailwind CSS and follows modern React practices using hooks and props.</p>
+          <div class="card-actions">
+            <a class="btn small" href="https://keeperappproject.netlify.app/" aria-disabled="true" target="_blank">View Live</a>
+            <a class="btn small ghost" href="https://github.com/affar048/keeper-app.git" aria-disabled="true" target="_blank">View Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="/projects/secrets.png" alt="Secrets"
+          onerror="this.src='https://via.placeholder.com/800x500/ffb86b/fff?text=Keeper+App'">
+        <div class="card-body">
+          <h3>Secrets</h3>
+          <p>The Secrets app is a secure platform that allows users to register, login, and anonymously share their secrets. This project emphasizes robust authentication, secure session management, and best practices in web security.</p>
+          <div class="card-actions">
+            <a class="btn small" href="https://secrets-project-psis.onrender.com/" aria-disabled="true" target="_blank">View Live</a>
+            <a class="btn small ghost" href="https://github.com/affar048/Secrets-Project.git" aria-disabled="true" target="_blank">View Code</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- <p class="muted" style="margin-top:1rem;">(GitHub / demo links coming soon.)</p> -->
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="section container reveal">
+  <h2 class="section-title">Certifications</h2>
+  
+  <div class="cert-grid">
+    <!-- Certificate 1 -->
+    <div class="cert-card">
+      <h3>Tutedude – MERN Stack</h3>
+      <p>Completed on 05 Jul 2025</p>
+      <a href="/certificates/certificate_TD-AFFA-ME-1117.pdf" target="_blank" class="btn primary">See Certificate</a>
+    </div>
+
+    <!-- Certificate 2 -->
+    <div class="cert-card">
+      <h3>Udemy –  Front End web development</h3>
+      <p>Completed June 30, 2024</p>
+      <a href="/certificates/UDEMY AFFAR.pdf" target="_blank" class="btn primary">See Certificate</a>
+    </div>
+
+    <!-- Certificate 3 -->
+    <div class="cert-card">
+      <h3>TCS iON – Career Edge</h3>
+      <p>Completed on 07 Oct 2024</p>
+      <a href="/certificates/AFFAR_A_ TCS.pdf" target="_blank" class="btn primary">See Certificate</a>
+    </div>
+
+    <!-- Certificate 4 -->
+     <div class="cert-card">
+      <h3>Codekaro – How to JavaScript</h3>
+      <p>Completed on 16 Dec 2023</p>
+      <a href="/certificates/codekaro-How to Javascript-certificate-a0450fff0eff19a4.pdf" target="_blank" class="btn primary">See Certificate</a>
+    </div>
+    
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="section container reveal">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-card">
+      <div class="contact-left">
+        <form class="contact-form" name="contact" action="/contact" method="POST">
+  <div class="grid form-grid">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+  </div>
+  <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+  <button type="submit" class="btn primary">Send</button>
+</form>
+
+      </div>
+      <div class="contact-right">
+        <div class="contact-info">
+          <h3>Let's talk</h3>
+          <p class="muted">Want to build something together? Drop a message or reach me directly.</p>
+          <ul class="contact-list">
+            <li><i class="fa fa-envelope"></i> <a href="mailto:affar048@gmail.com">affar048@gmail.com</a></li>
+            <li><i class="fa fa-phone"></i> <a href="tel:+916379218872">+91 6379218872</a></li>
+            <li><i class="fa fa-map-marker"></i> Kallakurichi, Tamil Nadu</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <p>© 2025 AFFAR. All rights reserved.</p>
+    <!-- social media links -->
+  <div class="social-links">
+  <a href="https://github.com/affar048" target="_blank" aria-label="GitHub">
+    <!-- GitHub SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.8 2.2 3.4 1.6.1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.3 1.1-3.2-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3.1 1.2.9-.3 1.9-.4 2.9-.4s2 .1 2.9.4c2.2-1.5 3.1-1.2 3.1-1.2.6 1.6.2 2.8.1 3.1.7.9 1.1 1.9 1.1 3.2 0 4.6-2.8 5.6-5.4 5.9.4.3.8 1 .8 2v3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5z"/>
+    </svg>
+  </a>
+
+  <a href="https://linkedin.com/in/affar-a-312501255" target="_blank" aria-label="LinkedIn">
+    <!-- LinkedIn SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.45 20.45h-3.6v-5.3c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8v5.4h-3.6v-11h3.5v1.5h.1c.5-.9 1.6-1.8 3.4-1.8 3.7 0 4.4 2.4 4.4 5.6v5.7zM5.3 8.4c-1.2 0-2.1-1-2.1-2.1s.9-2.1 2.1-2.1 2.1.9 2.1 2.1c0 1.1-.9 2.1-2.1 2.1zm1.8 12.05H3.5v-11h3.6v11zM22.2 0H1.8C.8 0 0 .8 0 1.8v20.4C0 23.2.8 24 1.8 24h20.4c1 0 1.8-.8 1.8-1.8V1.8c0-1-.8-1.8-1.8-1.8z"/>
+    </svg>
+  </a>
+  <a href="https://www.youtube.com/@affu048" target="_blank" aria-label="YouTube">
+  <!-- YouTube SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M19.615 3.184c-1.675-.444-8.615-.444-8.615-.444s-6.94 0-8.615.444C1.615 3.628 1 5.06 1 7.06v9.88c0 2 .615 3.432 1.385 3.876 1.675.444 8.615.444 8.615.444s6.94 0 8.615-.444C22.385 20.372 23 18.94 23 16.94V7.06c0-2-.615-3.432-1.385-3.876zM9.75 15.5v-7l6 3.5-6 3.5z"/>
+  </svg>
+</a>
+  <a href="https://www.facebook.com/affar048?__tn__=%3C%2Cd%3C*F" target="_blank" aria-label="Facebook">
+  <!-- Facebook SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 
+    23.407.593 24 1.325 24h11.495v-9.294H9.691V11.08h3.129V8.414c0-3.1 
+    1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24l-1.918.001c-1.504 
+    0-1.796.715-1.796 1.763v2.307h3.587l-.467 3.626h-3.12V24h6.116C23.407 
+    24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
+  </svg>
+  </a>
+
+</div>
+
+  </div>
+</footer>
+
+<a href="#top" class="to-top" aria-label="Back to top"><i class="fa fa-arrow-up"></i></a>
+</body>
+</html>

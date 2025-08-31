@@ -1,0 +1,51 @@
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const path = require("path");
+
+
+const app = express();
+
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public")); // for serving HTML/CSS/JS files
+
+// MongoDB connection
+mongoose.connect("mongodb+srv://affaraffu_db_user:4oPocilK3U9aMS09@myportfolio.8exmth2.mongodb.net/?retryWrites=true&w=majority&appName=myportfolio");
+
+// Schema
+const contactSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  message: String,
+});
+
+// Model
+const Contact = mongoose.model("Contact", contactSchema);
+
+// Route to handle form submission
+app.post("/contact", async (req, res) => {
+  try {
+    const newContact = new Contact({
+      name: req.body.name,
+      email: req.body.email,
+      message: req.body.message,
+    });
+
+    await newContact.save();
+    res.send("Message received! ✅");
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Something went wrong ❌");
+  }
+});
+
+// Serve your HTML file
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html")); // put your form in index.html
+});
+
+app.listen(3000, () => {
+  console.log("Server running at http://localhost:3000");
+});
+

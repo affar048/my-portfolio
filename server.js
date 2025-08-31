@@ -11,14 +11,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public")); // for serving HTML/CSS/JS files
 
 // MongoDB connection
-mongoose.connect(process.mongodb+srv://affaraffu_db_user:4oPocilK3U9aMS09@myportfolio.8exmth2.mongodb.net/myDatabase?retryWrites=true&w=majority&appName=myportfolio
-, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  tls: true, // ensure TLS/SSL with Atlas on Render
-})
-.then(() => console.log("✅ MongoDB connected"))
-.catch(err => console.error("❌ MongoDB connection error:", err));
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb+srv://affaraffu_db_user:4oPocilK3U9aMS09@myportfolio.8exmth2.mongodb.net/myDatabase')
+  .then(() => console.log('✅ MongoDB connected'))
+  .catch(err => console.error('❌ MongoDB connection error:', err));
 
 // Schema
 const contactSchema = new mongoose.Schema({

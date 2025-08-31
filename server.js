@@ -11,7 +11,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public")); // for serving HTML/CSS/JS files
 
 // MongoDB connection
-const mongoose = require('mongoose');
 
 mongoose.connect('mongodb+srv://affaraffu_db_user:4oPocilK3U9aMS09@myportfolio.8exmth2.mongodb.net/myDatabase')
   .then(() => console.log('✅ MongoDB connected'))

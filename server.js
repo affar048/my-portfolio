@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
-
+require("dotenv").config(); // load env vars
 
 const app = express();
 
@@ -11,7 +11,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public")); // for serving HTML/CSS/JS files
 
 // MongoDB connection
-mongoose.connect("mongodb+srv://affaraffu_db_user:4oPocilK3U9aMS09@myportfolio.8exmth2.mongodb.net/?retryWrites=true&w=majority&appName=myportfolio");
+
+mongoose.connect('mongodb+srv://affaraffu_db_user:4oPocilK3U9aMS09@myportfolio.8exmth2.mongodb.net/myDatabase')
+  .then(() => console.log('✅ MongoDB connected'))
+  .catch(err => console.error('❌ MongoDB connection error:', err));
 
 // Schema
 const contactSchema = new mongoose.Schema({
@@ -43,6 +46,12 @@ app.post("/contact", async (req, res) => {
 // Serve your HTML file
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html")); // put your form in index.html
+});
+
+// Use Render's PORT or default to 3000 locally
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
 
 app.listen(3000, () => {

@@ -1,60 +1,51 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const path = require("path");
-require("dotenv").config(); // load env vars
+require("dotenv").config();
 
 const app = express();
 
 // Middleware
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public")); // for serving HTML/CSS/JS files
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true })); // also parse form data
+app.use(express.static("public"));
 
-// MongoDB connection
+// Check env
+console.log("MONGO_URI from .env:", process.env.MONGO_URI ? "✅ Loaded" : "❌ Missing");
 
-mongoose.connect('mongodb+srv://affaraffu_db_user:4oPocilK3U9aMS09@myportfolio.8exmth2.mongodb.net/myDatabase')
-  .then(() => console.log('✅ MongoDB connected'))
-  .catch(err => console.error('❌ MongoDB connection error:', err));
+// Connect MongoDB
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("✅ MongoDB connected"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err));
 
-// Schema
+// Schema & Model
 const contactSchema = new mongoose.Schema({
   name: String,
   email: String,
   message: String,
+  date: { type: Date, default: Date.now },
 });
-
-// Model
 const Contact = mongoose.model("Contact", contactSchema);
 
-// Route to handle form submission
+// Route
 app.post("/contact", async (req, res) => {
-  try {
-    const newContact = new Contact({
-      name: req.body.name,
-      email: req.body.email,
-      message: req.body.message,
-    });
+  console.log("📩 Received at /contact:", req.body);
 
-    await newContact.save();
-    res.send("Message received! ✅");
+  try {
+    const contact = new Contact(req.body);
+    await contact.save();
+    console.log("✅ Saved to DB:", contact);
+    res.json({ message: "✅ Message saved successfully!" });
   } catch (err) {
-    console.error(err);
-    res.status(500).send("Something went wrong ❌");
+    console.error("❌ Save error:", err);
+    res.status(500).json({ message: "❌ Error saving message." });
   }
 });
 
-// Serve your HTML file
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html")); // put your form in index.html
-});
-
-// Use Render's PORT or default to 3000 locally
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-});
-
-app.listen(3000, () => {
-  console.log("Server running at http://localhost:3000");
-});
-
+// Start server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
